@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model User;
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Enter your infomation</h1>
+    </div>
+    <form action="register" method="post" class="col">
+        <div class="form-group row">
+            <label class="col-2" asp-for="FirstName"></label>
+            <span class="col-4 text-danger" asp-validation-for="FirstName"></span>
+            <input class="col" asp-for="FirstName">
+        </div>
+        <div class="form-group row">
+            <label asp-for="LastName" class="col-2"></label>
+            <span class="col-4 text-danger" asp-validation-for="LastName"></span>
+            <input asp-for="LastName" class="col">
+        </div>
+        <div class="form-group row">
+            <label asp-for="Age" class="col-2"></label>
+            <span class="col-4 text-danger" asp-validation-for="Age"></span>
+            <input asp-for="Age" class="col">
+        </div>
+        <div class="form-group row">
+            <label asp-for="Email" class="col-2"></label>
+            <span class="col-4 text-danger" asp-validation-for="Email"></span>
+            <input asp-for="Email" class="col">
+        </div>
+        <div class="form-group row">
+            <label asp-for="Password" class="col-2"></label>
+            <span class="col-4 text-left text-danger" asp-validation-for="Password"></span>
+            <input asp-for="Password" class="col">
+        </div>
+        <button class="row btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
